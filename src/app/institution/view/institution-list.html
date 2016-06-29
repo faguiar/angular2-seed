@@ -1,0 +1,7 @@
+<h2>Institution List</h2>
+<p>
+	<i>Select a institution</i>
+</p>
+<div *ngFor="let institution of institutions" (click)="selectInstitution(instituion)">
+	{{institution.name}}
+</div>

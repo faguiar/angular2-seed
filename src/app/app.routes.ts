@@ -6,6 +6,9 @@ import {RepoBrowser} from './components/repo-browser/repo-browser';
 import {RepoList} from './components/repo-list/repo-list';
 import {RepoDetail} from './components/repo-detail/repo-detail';
 
+import {InstitutionListComponent} from './institution/components/institution-list.component';
+import {InstitutionEditComponent} from './institution/components/institution-edit.component';
+
 const routes: RouterConfig = [
   { path: '', redirectTo: 'home', terminal: true },
   { path: 'home', component: Home },
@@ -16,7 +19,10 @@ const routes: RouterConfig = [
       { path: '', component: RepoDetail }
     ]},
     { path: '', component: RepoList}
-  ]}
+  ]},
+  {path: 'institution-list', component: InstitutionListComponent, children:[
+    {path: ':edit', component: InstitutionEditComponent}
+   ]}
 ];
 
 export const APP_ROUTER_PROVIDERS = [
