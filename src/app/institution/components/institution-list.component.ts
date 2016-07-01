@@ -1,13 +1,15 @@
 import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES, ActivatedRoute, Router} from '@angular/router';
-import {Institution} from './institution/institution';
+import {Institution} from '../institution';
+
+
 
 @Component({
     selector: 'institution-list',
     directives: [ROUTER_DIRECTIVES],
-    templateUrl: './institution/view/institution-list.html'
+    templateUrl: '../view/institution-list.html'
 })
-export class InstitutionListComponent implements OnInit {
+export class InstitutionListComponent {
 
     institutions: Institution[];
     selectedInstitution: Institution;
@@ -22,5 +24,3 @@ export class InstitutionListComponent implements OnInit {
         this.selectedInstitution = institution;
     }
 }
-
-

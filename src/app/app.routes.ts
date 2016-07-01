@@ -20,9 +20,7 @@ const routes: RouterConfig = [
     ]},
     { path: '', component: RepoList}
   ]},
-  {path: 'institution-list', component: InstitutionListComponent, children:[
-    {path: ':edit', component: InstitutionEditComponent}
-   ]}
+  {path: 'institution', component: InstitutionListComponent}
 ];
 
 export const APP_ROUTER_PROVIDERS = [

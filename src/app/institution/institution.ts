@@ -1,9 +1,14 @@
-export class Entity{
+
+export class Institution {
+    
     id: number;
     name: string;
-}
-
-export class Institution extends Entity{
+    
+    
+    constructor(id: number, name: string){
+        this.id = id;
+        this.name = name;
+    }    
     
 }
 
